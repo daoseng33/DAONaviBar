@@ -67,8 +67,4 @@
     }
 }
 
-- (void)dealloc {
-    NSLog(@"web view dealloc");
-}
-
 @end

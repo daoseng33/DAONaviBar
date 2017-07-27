@@ -7,7 +7,7 @@
 //
 
 #import "DAONaviBar.h"
-#import "DAODelegateRouter.h"
+#import "HTDelegateProxy.h"
 
 @interface DAONaviBar () <UIScrollViewDelegate>
 
@@ -17,7 +17,7 @@
 
 @property (nonatomic) CGFloat previousScrollViewYOffset;
 @property (assign, nonatomic) BOOL isScrollAnimating;
-@property (strong, nonatomic) id delegateRouter;
+@property (strong, nonatomic) HTDelegateProxy *delegateProxy;
 
 @end
 
@@ -158,9 +158,8 @@
 
 - (void)setupWithController:(UIViewController *)vc scrollView:(UIScrollView *)scrollView {
     self.vc = vc;
-
-    self.delegateRouter = [[DAODelegateRouter alloc] initWithCurrentViewDelegate:self superViewDelegate:vc];
-    scrollView.delegate = self.delegateRouter;
+    self.delegateProxy = [[HTDelegateProxy alloc] initWithDelegates:@[self, vc]];
+    scrollView.delegate = (id)self.delegateProxy;
     
     [self setupInitValues];
     [self setupBackImageView];

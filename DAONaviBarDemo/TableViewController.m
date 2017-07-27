@@ -72,9 +72,4 @@
     [super viewDidLoad];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [[DAONaviBar sharedInstance] setupWithController:self scrollView:self.tableView];
-}
-
 @end

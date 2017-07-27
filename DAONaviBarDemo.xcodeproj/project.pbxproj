@@ -7,34 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B986F03F1F288C5F00A0D8A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F03E1F288C5F00A0D8A9 /* main.m */; };
-		B986F0421F288C5F00A0D8A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0411F288C5F00A0D8A9 /* AppDelegate.m */; };
-		B986F0481F288C5F00A0D8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F0461F288C5F00A0D8A9 /* Main.storyboard */; };
-		B986F04D1F288C6000A0D8A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F04B1F288C6000A0D8A9 /* LaunchScreen.storyboard */; };
-		B986F0561F288D7100A0D8A9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0551F288D7100A0D8A9 /* TableViewController.m */; };
-		B986F05E1F28936B00A0D8A9 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B986F05D1F28936B00A0D8A9 /* Media.xcassets */; };
-		B986F0641F28949500A0D8A9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0631F28949500A0D8A9 /* WebViewController.m */; };
-		B986F0681F2895A400A0D8A9 /* DAONaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0671F2895A400A0D8A9 /* DAONaviBar.m */; };
-		B986F06E1F298EEC00A0D8A9 /* DAODelegateRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F06D1F298EEC00A0D8A9 /* DAODelegateRouter.m */; };
+		B986F0821F299C4200A0D8A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0711F299C4200A0D8A9 /* AppDelegate.m */; };
+		B986F0831F299C4200A0D8A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F0721F299C4200A0D8A9 /* LaunchScreen.storyboard */; };
+		B986F0841F299C4200A0D8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F0741F299C4200A0D8A9 /* Main.storyboard */; };
+		B986F0861F299C4200A0D8A9 /* DAONaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F07A1F299C4200A0D8A9 /* DAONaviBar.m */; };
+		B986F0871F299C4200A0D8A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B986F07B1F299C4200A0D8A9 /* Info.plist */; };
+		B986F0881F299C4200A0D8A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F07C1F299C4200A0D8A9 /* main.m */; };
+		B986F0891F299C4200A0D8A9 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B986F07D1F299C4200A0D8A9 /* Media.xcassets */; };
+		B986F08A1F299C4200A0D8A9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F07F1F299C4200A0D8A9 /* TableViewController.m */; };
+		B986F08B1F299C4200A0D8A9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0811F299C4200A0D8A9 /* WebViewController.m */; };
+		B986F0961F29C0B400A0D8A9 /* HTDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0951F29C0B400A0D8A9 /* HTDelegateProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B986F03A1F288C5F00A0D8A9 /* DAONaviBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAONaviBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B986F03E1F288C5F00A0D8A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B986F0401F288C5F00A0D8A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B986F0411F288C5F00A0D8A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B986F0471F288C5F00A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B986F04C1F288C6000A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B986F04E1F288C6000A0D8A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B986F0541F288D7100A0D8A9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		B986F0551F288D7100A0D8A9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		B986F05D1F28936B00A0D8A9 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		B986F0621F28949500A0D8A9 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		B986F0631F28949500A0D8A9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		B986F0661F2895A400A0D8A9 /* DAONaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAONaviBar.h; sourceTree = "<group>"; };
-		B986F0671F2895A400A0D8A9 /* DAONaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAONaviBar.m; sourceTree = "<group>"; };
-		B986F06C1F298EEC00A0D8A9 /* DAODelegateRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAODelegateRouter.h; sourceTree = "<group>"; };
-		B986F06D1F298EEC00A0D8A9 /* DAODelegateRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAODelegateRouter.m; sourceTree = "<group>"; };
+		B986F03A1F288C5F00A0D8A9 /* DAONaviBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAONaviBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B986F0701F299C4200A0D8A9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B986F0711F299C4200A0D8A9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B986F0731F299C4200A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B986F0751F299C4200A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B986F0791F299C4200A0D8A9 /* DAONaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAONaviBar.h; sourceTree = "<group>"; };
+		B986F07A1F299C4200A0D8A9 /* DAONaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAONaviBar.m; sourceTree = "<group>"; };
+		B986F07B1F299C4200A0D8A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B986F07C1F299C4200A0D8A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B986F07D1F299C4200A0D8A9 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		B986F07E1F299C4200A0D8A9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B986F07F1F299C4200A0D8A9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B986F0801F299C4200A0D8A9 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B986F0811F299C4200A0D8A9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		B986F0941F29C0B400A0D8A9 /* HTDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTDelegateProxy.h; sourceTree = "<group>"; };
+		B986F0951F29C0B400A0D8A9 /* HTDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTDelegateProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +52,7 @@
 		B986F0311F288C5F00A0D8A9 = {
 			isa = PBXGroup;
 			children = (
-				B986F03C1F288C5F00A0D8A9 /* DAONaviBar */,
+				B986F06F1F299C4200A0D8A9 /* DAONaviBarDemo */,
 				B986F03B1F288C5F00A0D8A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,55 +60,63 @@
 		B986F03B1F288C5F00A0D8A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B986F03A1F288C5F00A0D8A9 /* DAONaviBar.app */,
+				B986F03A1F288C5F00A0D8A9 /* DAONaviBarDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B986F03C1F288C5F00A0D8A9 /* DAONaviBar */ = {
+		B986F06F1F299C4200A0D8A9 /* DAONaviBarDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B986F0651F2895A400A0D8A9 /* DAONaviBar */,
-				B986F0541F288D7100A0D8A9 /* TableViewController.h */,
-				B986F0551F288D7100A0D8A9 /* TableViewController.m */,
-				B986F0621F28949500A0D8A9 /* WebViewController.h */,
-				B986F0631F28949500A0D8A9 /* WebViewController.m */,
-				B986F0401F288C5F00A0D8A9 /* AppDelegate.h */,
-				B986F0411F288C5F00A0D8A9 /* AppDelegate.m */,
-				B986F0461F288C5F00A0D8A9 /* Main.storyboard */,
-				B986F04B1F288C6000A0D8A9 /* LaunchScreen.storyboard */,
-				B986F04E1F288C6000A0D8A9 /* Info.plist */,
-				B986F03D1F288C5F00A0D8A9 /* Supporting Files */,
+				B986F0761F299C4200A0D8A9 /* DAONaviBar */,
+				B986F07E1F299C4200A0D8A9 /* TableViewController.h */,
+				B986F07F1F299C4200A0D8A9 /* TableViewController.m */,
+				B986F0801F299C4200A0D8A9 /* WebViewController.h */,
+				B986F0811F299C4200A0D8A9 /* WebViewController.m */,
+				B986F08C1F299D2F00A0D8A9 /* SupportingFiles */,
+			);
+			path = DAONaviBarDemo;
+			sourceTree = "<group>";
+		};
+		B986F0761F299C4200A0D8A9 /* DAONaviBar */ = {
+			isa = PBXGroup;
+			children = (
+				B986F0791F299C4200A0D8A9 /* DAONaviBar.h */,
+				B986F07A1F299C4200A0D8A9 /* DAONaviBar.m */,
+				B986F0931F29C0B400A0D8A9 /* HTDelegateProxy */,
 			);
 			path = DAONaviBar;
 			sourceTree = "<group>";
 		};
-		B986F03D1F288C5F00A0D8A9 /* Supporting Files */ = {
+		B986F08C1F299D2F00A0D8A9 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B986F05D1F28936B00A0D8A9 /* Media.xcassets */,
-				B986F03E1F288C5F00A0D8A9 /* main.m */,
+				B986F0701F299C4200A0D8A9 /* AppDelegate.h */,
+				B986F0711F299C4200A0D8A9 /* AppDelegate.m */,
+				B986F0721F299C4200A0D8A9 /* LaunchScreen.storyboard */,
+				B986F0741F299C4200A0D8A9 /* Main.storyboard */,
+				B986F07B1F299C4200A0D8A9 /* Info.plist */,
+				B986F07C1F299C4200A0D8A9 /* main.m */,
+				B986F07D1F299C4200A0D8A9 /* Media.xcassets */,
 			);
-			name = "Supporting Files";
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		B986F0651F2895A400A0D8A9 /* DAONaviBar */ = {
+		B986F0931F29C0B400A0D8A9 /* HTDelegateProxy */ = {
 			isa = PBXGroup;
 			children = (
-				B986F0661F2895A400A0D8A9 /* DAONaviBar.h */,
-				B986F0671F2895A400A0D8A9 /* DAONaviBar.m */,
-				B986F06C1F298EEC00A0D8A9 /* DAODelegateRouter.h */,
-				B986F06D1F298EEC00A0D8A9 /* DAODelegateRouter.m */,
+				B986F0941F29C0B400A0D8A9 /* HTDelegateProxy.h */,
+				B986F0951F29C0B400A0D8A9 /* HTDelegateProxy.m */,
 			);
-			path = DAONaviBar;
+			path = HTDelegateProxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B986F0391F288C5F00A0D8A9 /* DAONaviBar */ = {
+		B986F0391F288C5F00A0D8A9 /* DAONaviBarDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B986F0511F288C6000A0D8A9 /* Build configuration list for PBXNativeTarget "DAONaviBar" */;
+			buildConfigurationList = B986F0511F288C6000A0D8A9 /* Build configuration list for PBXNativeTarget "DAONaviBarDemo" */;
 			buildPhases = (
 				B986F0361F288C5F00A0D8A9 /* Sources */,
 				B986F0371F288C5F00A0D8A9 /* Frameworks */,
@@ -117,9 +126,9 @@
 			);
 			dependencies = (
 			);
-			name = DAONaviBar;
+			name = DAONaviBarDemo;
 			productName = DAONaviBar;
-			productReference = B986F03A1F288C5F00A0D8A9 /* DAONaviBar.app */;
+			productReference = B986F03A1F288C5F00A0D8A9 /* DAONaviBarDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B986F0351F288C5F00A0D8A9 /* Build configuration list for PBXProject "DAONaviBar" */;
+			buildConfigurationList = B986F0351F288C5F00A0D8A9 /* Build configuration list for PBXProject "DAONaviBarDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -150,7 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B986F0391F288C5F00A0D8A9 /* DAONaviBar */,
+				B986F0391F288C5F00A0D8A9 /* DAONaviBarDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -160,9 +169,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B986F04D1F288C6000A0D8A9 /* LaunchScreen.storyboard in Resources */,
-				B986F05E1F28936B00A0D8A9 /* Media.xcassets in Resources */,
-				B986F0481F288C5F00A0D8A9 /* Main.storyboard in Resources */,
+				B986F0831F299C4200A0D8A9 /* LaunchScreen.storyboard in Resources */,
+				B986F0841F299C4200A0D8A9 /* Main.storyboard in Resources */,
+				B986F0891F299C4200A0D8A9 /* Media.xcassets in Resources */,
+				B986F0871F299C4200A0D8A9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,32 +183,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B986F06E1F298EEC00A0D8A9 /* DAODelegateRouter.m in Sources */,
-				B986F0421F288C5F00A0D8A9 /* AppDelegate.m in Sources */,
-				B986F03F1F288C5F00A0D8A9 /* main.m in Sources */,
-				B986F0561F288D7100A0D8A9 /* TableViewController.m in Sources */,
-				B986F0681F2895A400A0D8A9 /* DAONaviBar.m in Sources */,
-				B986F0641F28949500A0D8A9 /* WebViewController.m in Sources */,
+				B986F08B1F299C4200A0D8A9 /* WebViewController.m in Sources */,
+				B986F0961F29C0B400A0D8A9 /* HTDelegateProxy.m in Sources */,
+				B986F0861F299C4200A0D8A9 /* DAONaviBar.m in Sources */,
+				B986F0881F299C4200A0D8A9 /* main.m in Sources */,
+				B986F08A1F299C4200A0D8A9 /* TableViewController.m in Sources */,
+				B986F0821F299C4200A0D8A9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B986F0461F288C5F00A0D8A9 /* Main.storyboard */ = {
+		B986F0721F299C4200A0D8A9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B986F0471F288C5F00A0D8A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B986F04B1F288C6000A0D8A9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B986F04C1F288C6000A0D8A9 /* Base */,
+				B986F0731F299C4200A0D8A9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B986F0741F299C4200A0D8A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B986F0751F299C4200A0D8A9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -300,11 +310,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DAONaviBar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DAONaviBarDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.likeabossapp.DAONaviBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -312,18 +324,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DAONaviBar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DAONaviBarDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.likeabossapp.DAONaviBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B986F0351F288C5F00A0D8A9 /* Build configuration list for PBXProject "DAONaviBar" */ = {
+		B986F0351F288C5F00A0D8A9 /* Build configuration list for PBXProject "DAONaviBarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B986F04F1F288C6000A0D8A9 /* Debug */,
@@ -332,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B986F0511F288C6000A0D8A9 /* Build configuration list for PBXNativeTarget "DAONaviBar" */ = {
+		B986F0511F288C6000A0D8A9 /* Build configuration list for PBXNativeTarget "DAONaviBarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B986F0521F288C6000A0D8A9 /* Debug */,
