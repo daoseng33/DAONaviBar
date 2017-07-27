@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/daoseng33/DAONaviBar.git", :tag => "#{s.version}" }
   s.source_files = "DAONaviBar", "DAONaviBarDemo/DAONaviBar/**/*.{h,m}"
   s.framework    = "UIKit"
+  s.dependency 'HTDelegateProxy', '~> 0.0.2'
   # s.frameworks = "SomeFramework", "AnotherFramework"
 end
