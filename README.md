@@ -9,10 +9,14 @@ DaoNaviBar is a navigation bar with smooth auto-scrolling animation.
 pod 'DAONaviBar', '~> 0.3'
 ```
 
-### Usage ###
+## Usage ##
+### Import DAONaviBar first ###
 ```objective-c
 #import "DAONaviBar.h"
+```
 
+### Just need one line in viewDidAppear ###
+```objective-c
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [[DAONaviBar sharedInstance] setupWithController:self scrollView:self.scrollViewToTrack];
