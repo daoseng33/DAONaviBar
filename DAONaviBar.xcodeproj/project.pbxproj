@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		B986F03F1F288C5F00A0D8A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F03E1F288C5F00A0D8A9 /* main.m */; };
 		B986F0421F288C5F00A0D8A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0411F288C5F00A0D8A9 /* AppDelegate.m */; };
-		B986F0451F288C5F00A0D8A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0441F288C5F00A0D8A9 /* ViewController.m */; };
 		B986F0481F288C5F00A0D8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F0461F288C5F00A0D8A9 /* Main.storyboard */; };
-		B986F04A1F288C6000A0D8A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B986F0491F288C6000A0D8A9 /* Assets.xcassets */; };
 		B986F04D1F288C6000A0D8A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F04B1F288C6000A0D8A9 /* LaunchScreen.storyboard */; };
+		B986F0561F288D7100A0D8A9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0551F288D7100A0D8A9 /* TableViewController.m */; };
+		B986F05E1F28936B00A0D8A9 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B986F05D1F28936B00A0D8A9 /* Media.xcassets */; };
+		B986F0641F28949500A0D8A9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0631F28949500A0D8A9 /* WebViewController.m */; };
+		B986F0681F2895A400A0D8A9 /* DAONaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0671F2895A400A0D8A9 /* DAONaviBar.m */; };
+		B986F06E1F298EEC00A0D8A9 /* DAODelegateRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F06D1F298EEC00A0D8A9 /* DAODelegateRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		B986F03E1F288C5F00A0D8A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B986F0401F288C5F00A0D8A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B986F0411F288C5F00A0D8A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B986F0431F288C5F00A0D8A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B986F0441F288C5F00A0D8A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B986F0471F288C5F00A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B986F0491F288C6000A0D8A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B986F04C1F288C6000A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B986F04E1F288C6000A0D8A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B986F0541F288D7100A0D8A9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B986F0551F288D7100A0D8A9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B986F05D1F28936B00A0D8A9 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		B986F0621F28949500A0D8A9 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B986F0631F28949500A0D8A9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		B986F0661F2895A400A0D8A9 /* DAONaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAONaviBar.h; sourceTree = "<group>"; };
+		B986F0671F2895A400A0D8A9 /* DAONaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAONaviBar.m; sourceTree = "<group>"; };
+		B986F06C1F298EEC00A0D8A9 /* DAODelegateRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAODelegateRouter.h; sourceTree = "<group>"; };
+		B986F06D1F298EEC00A0D8A9 /* DAODelegateRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAODelegateRouter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +67,14 @@
 		B986F03C1F288C5F00A0D8A9 /* DAONaviBar */ = {
 			isa = PBXGroup;
 			children = (
+				B986F0651F2895A400A0D8A9 /* DAONaviBar */,
+				B986F0541F288D7100A0D8A9 /* TableViewController.h */,
+				B986F0551F288D7100A0D8A9 /* TableViewController.m */,
+				B986F0621F28949500A0D8A9 /* WebViewController.h */,
+				B986F0631F28949500A0D8A9 /* WebViewController.m */,
 				B986F0401F288C5F00A0D8A9 /* AppDelegate.h */,
 				B986F0411F288C5F00A0D8A9 /* AppDelegate.m */,
-				B986F0431F288C5F00A0D8A9 /* ViewController.h */,
-				B986F0441F288C5F00A0D8A9 /* ViewController.m */,
 				B986F0461F288C5F00A0D8A9 /* Main.storyboard */,
-				B986F0491F288C6000A0D8A9 /* Assets.xcassets */,
 				B986F04B1F288C6000A0D8A9 /* LaunchScreen.storyboard */,
 				B986F04E1F288C6000A0D8A9 /* Info.plist */,
 				B986F03D1F288C5F00A0D8A9 /* Supporting Files */,
@@ -74,9 +85,21 @@
 		B986F03D1F288C5F00A0D8A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B986F05D1F28936B00A0D8A9 /* Media.xcassets */,
 				B986F03E1F288C5F00A0D8A9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B986F0651F2895A400A0D8A9 /* DAONaviBar */ = {
+			isa = PBXGroup;
+			children = (
+				B986F0661F2895A400A0D8A9 /* DAONaviBar.h */,
+				B986F0671F2895A400A0D8A9 /* DAONaviBar.m */,
+				B986F06C1F298EEC00A0D8A9 /* DAODelegateRouter.h */,
+				B986F06D1F298EEC00A0D8A9 /* DAODelegateRouter.m */,
+			);
+			path = DAONaviBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +133,6 @@
 				TargetAttributes = {
 					B986F0391F288C5F00A0D8A9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = R33X9HN7ET;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B986F04D1F288C6000A0D8A9 /* LaunchScreen.storyboard in Resources */,
-				B986F04A1F288C6000A0D8A9 /* Assets.xcassets in Resources */,
+				B986F05E1F28936B00A0D8A9 /* Media.xcassets in Resources */,
 				B986F0481F288C5F00A0D8A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B986F0451F288C5F00A0D8A9 /* ViewController.m in Sources */,
+				B986F06E1F298EEC00A0D8A9 /* DAODelegateRouter.m in Sources */,
 				B986F0421F288C5F00A0D8A9 /* AppDelegate.m in Sources */,
 				B986F03F1F288C5F00A0D8A9 /* main.m in Sources */,
+				B986F0561F288D7100A0D8A9 /* TableViewController.m in Sources */,
+				B986F0681F2895A400A0D8A9 /* DAONaviBar.m in Sources */,
+				B986F0641F28949500A0D8A9 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R33X9HN7ET;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DAONaviBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.likeabossapp.DAONaviBar;
@@ -287,7 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R33X9HN7ET;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DAONaviBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.likeabossapp.DAONaviBar;
@@ -314,6 +339,7 @@
 				B986F0531F288C6000A0D8A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
