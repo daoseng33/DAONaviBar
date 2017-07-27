@@ -10,13 +10,13 @@
 		B986F0821F299C4200A0D8A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0711F299C4200A0D8A9 /* AppDelegate.m */; };
 		B986F0831F299C4200A0D8A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F0721F299C4200A0D8A9 /* LaunchScreen.storyboard */; };
 		B986F0841F299C4200A0D8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B986F0741F299C4200A0D8A9 /* Main.storyboard */; };
-		B986F0861F299C4200A0D8A9 /* DAONaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F07A1F299C4200A0D8A9 /* DAONaviBar.m */; };
 		B986F0871F299C4200A0D8A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B986F07B1F299C4200A0D8A9 /* Info.plist */; };
 		B986F0881F299C4200A0D8A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F07C1F299C4200A0D8A9 /* main.m */; };
 		B986F0891F299C4200A0D8A9 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B986F07D1F299C4200A0D8A9 /* Media.xcassets */; };
 		B986F08A1F299C4200A0D8A9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F07F1F299C4200A0D8A9 /* TableViewController.m */; };
 		B986F08B1F299C4200A0D8A9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0811F299C4200A0D8A9 /* WebViewController.m */; };
-		B986F0961F29C0B400A0D8A9 /* HTDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0951F29C0B400A0D8A9 /* HTDelegateProxy.m */; };
+		B986F0A51F29ED5300A0D8A9 /* DAONaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0A11F29ED5300A0D8A9 /* DAONaviBar.m */; };
+		B986F0A61F29ED5300A0D8A9 /* HTDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B986F0A41F29ED5300A0D8A9 /* HTDelegateProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,6 @@
 		B986F0711F299C4200A0D8A9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B986F0731F299C4200A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B986F0751F299C4200A0D8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B986F0791F299C4200A0D8A9 /* DAONaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAONaviBar.h; sourceTree = "<group>"; };
-		B986F07A1F299C4200A0D8A9 /* DAONaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAONaviBar.m; sourceTree = "<group>"; };
 		B986F07B1F299C4200A0D8A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B986F07C1F299C4200A0D8A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B986F07D1F299C4200A0D8A9 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -34,8 +32,10 @@
 		B986F07F1F299C4200A0D8A9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		B986F0801F299C4200A0D8A9 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		B986F0811F299C4200A0D8A9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		B986F0941F29C0B400A0D8A9 /* HTDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTDelegateProxy.h; sourceTree = "<group>"; };
-		B986F0951F29C0B400A0D8A9 /* HTDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTDelegateProxy.m; sourceTree = "<group>"; };
+		B986F0A01F29ED5300A0D8A9 /* DAONaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAONaviBar.h; sourceTree = "<group>"; };
+		B986F0A11F29ED5300A0D8A9 /* DAONaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAONaviBar.m; sourceTree = "<group>"; };
+		B986F0A31F29ED5300A0D8A9 /* HTDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTDelegateProxy.h; sourceTree = "<group>"; };
+		B986F0A41F29ED5300A0D8A9 /* HTDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTDelegateProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +52,7 @@
 		B986F0311F288C5F00A0D8A9 = {
 			isa = PBXGroup;
 			children = (
+				B986F09F1F29ED5300A0D8A9 /* DAONaviBar */,
 				B986F06F1F299C4200A0D8A9 /* DAONaviBarDemo */,
 				B986F03B1F288C5F00A0D8A9 /* Products */,
 			);
@@ -68,7 +69,6 @@
 		B986F06F1F299C4200A0D8A9 /* DAONaviBarDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B986F0761F299C4200A0D8A9 /* DAONaviBar */,
 				B986F07E1F299C4200A0D8A9 /* TableViewController.h */,
 				B986F07F1F299C4200A0D8A9 /* TableViewController.m */,
 				B986F0801F299C4200A0D8A9 /* WebViewController.h */,
@@ -76,16 +76,6 @@
 				B986F08C1F299D2F00A0D8A9 /* SupportingFiles */,
 			);
 			path = DAONaviBarDemo;
-			sourceTree = "<group>";
-		};
-		B986F0761F299C4200A0D8A9 /* DAONaviBar */ = {
-			isa = PBXGroup;
-			children = (
-				B986F0791F299C4200A0D8A9 /* DAONaviBar.h */,
-				B986F07A1F299C4200A0D8A9 /* DAONaviBar.m */,
-				B986F0931F29C0B400A0D8A9 /* HTDelegateProxy */,
-			);
-			path = DAONaviBar;
 			sourceTree = "<group>";
 		};
 		B986F08C1F299D2F00A0D8A9 /* SupportingFiles */ = {
@@ -102,11 +92,21 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		B986F0931F29C0B400A0D8A9 /* HTDelegateProxy */ = {
+		B986F09F1F29ED5300A0D8A9 /* DAONaviBar */ = {
 			isa = PBXGroup;
 			children = (
-				B986F0941F29C0B400A0D8A9 /* HTDelegateProxy.h */,
-				B986F0951F29C0B400A0D8A9 /* HTDelegateProxy.m */,
+				B986F0A01F29ED5300A0D8A9 /* DAONaviBar.h */,
+				B986F0A11F29ED5300A0D8A9 /* DAONaviBar.m */,
+				B986F0A21F29ED5300A0D8A9 /* HTDelegateProxy */,
+			);
+			path = DAONaviBar;
+			sourceTree = "<group>";
+		};
+		B986F0A21F29ED5300A0D8A9 /* HTDelegateProxy */ = {
+			isa = PBXGroup;
+			children = (
+				B986F0A31F29ED5300A0D8A9 /* HTDelegateProxy.h */,
+				B986F0A41F29ED5300A0D8A9 /* HTDelegateProxy.m */,
 			);
 			path = HTDelegateProxy;
 			sourceTree = "<group>";
@@ -184,10 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B986F08B1F299C4200A0D8A9 /* WebViewController.m in Sources */,
-				B986F0961F29C0B400A0D8A9 /* HTDelegateProxy.m in Sources */,
-				B986F0861F299C4200A0D8A9 /* DAONaviBar.m in Sources */,
+				B986F0A61F29ED5300A0D8A9 /* HTDelegateProxy.m in Sources */,
 				B986F0881F299C4200A0D8A9 /* main.m in Sources */,
 				B986F08A1F299C4200A0D8A9 /* TableViewController.m in Sources */,
+				B986F0A51F29ED5300A0D8A9 /* DAONaviBar.m in Sources */,
 				B986F0821F299C4200A0D8A9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
