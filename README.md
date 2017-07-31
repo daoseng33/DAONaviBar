@@ -1,5 +1,5 @@
 # DAONaviBar
-DaoNaviBar is a navigation bar with smooth auto-scrolling animation.
+DaoNaviBar is a Facebook like navigation bar with smooth auto-scrolling animation.
 
 ![Image of navibar](https://media.giphy.com/media/aMkjGZk8fA8HC/giphy.gif)
 
