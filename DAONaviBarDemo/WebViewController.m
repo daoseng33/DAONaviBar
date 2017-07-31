@@ -67,4 +67,8 @@
     }
 }
 
+- (void)dealloc {
+    self.webView.scrollView.delegate = nil;
+}
+
 @end
