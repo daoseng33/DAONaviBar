@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "DAONaviBar"
-  s.version      = "0.3.0"
-  s.summary      = "DaoNaviBar is a navigation bar with smooth auto-scrolling animation."
+  s.version      = "0.3.1"
+  s.summary      = "DaoNaviBar is a Facebook like navigation bar with smooth auto-scrolling animation."
   s.homepage     = "https://github.com/daoseng33/DAONaviBar"
   s.screenshots  = "https://media.giphy.com/media/aMkjGZk8fA8HC/giphy.gif"
   s.license      = "WTFPL"
