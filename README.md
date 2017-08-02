@@ -10,12 +10,12 @@ pod 'DAONaviBar', '~> 0.3.3'
 ```
 
 ## Usage ##
-### Import DAONaviBar first ###
+### 1.Import DAONaviBar first ###
 ```objective-c
 #import "DAONaviBar.h"
 ```
 
-### Just need one line in viewDidAppear ###
+### 2.Just need one line in viewDidAppear ###
 ```objective-c
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
