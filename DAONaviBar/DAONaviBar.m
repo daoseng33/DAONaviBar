@@ -9,13 +9,17 @@
 #import "DAONaviBar.h"
 #import "HTDelegateProxy.h"
 
+static CGFloat foldNaviHeight = 24.0;
+static CGFloat expandNaviHeight = 44.0;
+
 @interface DAONaviBar () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) UIViewController *vc;
-@property (strong, nonatomic) UIWindow *statusBarWindow;
+@property (weak, nonatomic) UIWindow *statusBarWindow;
 @property (strong, nonatomic) UIView *cloneBackView;
 
 @property (nonatomic) CGFloat previousScrollViewYOffset;
+@property (nonatomic) CGRect originalBackButtonFrame;
 @property (assign, nonatomic) BOOL isScrollAnimating;
 @property (strong, nonatomic) HTDelegateProxy *delegateProxy;
 
@@ -39,10 +43,10 @@
         CGFloat velocity = 40;
         
         if (scrollDiff > velocity) {
-            [self showStatusBar:NO];
+            [self showStatusBar:NO completion:nil];
         }
         else if (scrollDiff < -velocity) {
-            [self showStatusBar:YES];
+            [self showStatusBar:YES completion:nil];
         }
         
         if (!self.isScrollAnimating) {
@@ -54,7 +58,7 @@
 
             CGRect frame = self.vc.navigationController.navigationBar.frame;
             frame.origin.y = MIN(CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), MAX(0, frame.origin.y - (scrollDiff / velocityLevel)));
-            frame.size.height = MIN(44, MAX(24, frame.size.height - (scrollDiff / velocityLevel)));
+            frame.size.height = MIN(expandNaviHeight, MAX(foldNaviHeight, frame.size.height - (scrollDiff / velocityLevel)));
             [self.vc.navigationController.navigationBar setFrame:frame];
             
             [self updateBarButtonItems:framePercentage];
@@ -78,10 +82,10 @@
 #pragma - animation
 
 - (void)stoppedScrolling {
-    [self showStatusBar:self.statusBarWindow.frame.origin.y >= 0 - (CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) / 2)];
+    [self showStatusBar:self.statusBarWindow.frame.origin.y >= 0 - (CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) / 2) completion:nil];
 }
 
-- (void)showStatusBar:(BOOL)show {
+- (void)showStatusBar:(BOOL)show completion:(void (^ __nullable)(void))completion {
     self.isScrollAnimating = YES;
     
     CGRect statusFrame = self.statusBarWindow.frame;
@@ -89,7 +93,7 @@
     
     CGRect frame = self.vc.navigationController.navigationBar.frame;
     frame.origin.y = show ? CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) : 0;
-    frame.size.height = show ? 44 : 24;
+    frame.size.height = show ? expandNaviHeight : foldNaviHeight;
     
     CGFloat percentage = show ? 0 : 1;
     
@@ -100,6 +104,9 @@
         [self updateBarButtonItems:percentage];
     } completion:^(BOOL finished) {
         self.isScrollAnimating = NO;
+        if(completion) {
+            completion();
+        }
     }];
 }
 
@@ -112,9 +119,9 @@
     CGFloat alpha = 1 - percentage;
     
     CGRect frame = self.cloneBackView.frame;
-    frame.origin.y = 6 - (6 * percentage);
-    frame.origin.x = 6 - (10 * percentage);
-    frame.size.height = 30 - (6 * percentage);
+    frame.origin.y = CGRectGetMinY(self.originalBackButtonFrame) - (CGRectGetMinY(self.originalBackButtonFrame) * percentage);
+    frame.origin.x = CGRectGetMinX(self.originalBackButtonFrame) - (10 * percentage);
+    frame.size.height = CGRectGetHeight(self.originalBackButtonFrame) - ((CGRectGetHeight(self.originalBackButtonFrame) - foldNaviHeight) * percentage);
     self.cloneBackView.frame = frame;
     
     for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
@@ -127,13 +134,20 @@
 #pragma mark - misc
 
 - (void)tap:(UITapGestureRecognizer *)sender {
-    [self showStatusBar:YES];
+    [self showStatusBar:YES completion:nil];
 }
 
 - (void)back:(UITapGestureRecognizer *)sender {
-    [self showStatusBar:YES];
-    [self showDefaultBackButton];
-    [self.vc.navigationController popViewControllerAnimated:YES];
+    [self showStatusBar:YES completion:^ {
+        [self showDefaultBackButton];
+        
+        if ([self isModal]) {
+            [self.vc dismissViewControllerAnimated:YES completion:nil];
+        }
+        else {
+            [self.vc.navigationController popViewControllerAnimated:YES];
+        }
+    }];
 }
 
 - (void)showDefaultBackButton {
@@ -143,6 +157,17 @@
             [self.cloneBackView removeFromSuperview];
         }
     }
+}
+
+- (BOOL)isModal {
+    if([self.vc presentingViewController])
+        return YES;
+    if([[[self.vc navigationController] presentingViewController] presentedViewController] == [self.vc navigationController])
+        return YES;
+    if([[[self.vc tabBarController] presentingViewController] isKindOfClass:[UITabBarController class]])
+        return YES;
+    
+    return NO;
 }
 
 #pragma mark - init values
@@ -175,6 +200,7 @@
     for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
         if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"]) {
             self.cloneBackView = [[UIView alloc] initWithFrame:view.frame];
+            self.originalBackButtonFrame = view.frame;
             
             for (UIImageView *imageView in view.subviews) {
                 imageView.contentMode = UIViewContentModeScaleAspectFit;
