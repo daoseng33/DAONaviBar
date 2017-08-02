@@ -118,7 +118,7 @@
     self.cloneBackView.frame = frame;
     
     for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
-        if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"]) {
+        if (![NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackIndicatorView"] && ![NSStringFromClass([view class]) isEqualToString:@"_UIBarBackground"] && view != self.cloneBackView) {
             view.alpha = alpha;
         }
     }
