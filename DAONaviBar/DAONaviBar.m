@@ -33,20 +33,29 @@ static CGFloat expandNaviHeight = 44.0;
     if (scrollView.isDragging) {
         CGFloat scrollHeight = scrollView.frame.size.height;
         CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
-        CGFloat scrollOffset = MAX(-scrollView.contentInset.top, MIN(scrollContentSizeHeight - scrollHeight, scrollView.contentOffset.y));
+//        CGFloat scrollOffset = MAX(-scrollView.contentInset.top, MIN(scrollContentSizeHeight - scrollHeight, scrollView.contentOffset.y));
+        CGFloat scrollOffset = scrollView.contentOffset.y;
         
         CGRect statusFrame = self.statusBarWindow.frame;
         CGFloat framePercentage = ((0 - statusFrame.origin.y) / CGRectGetHeight([UIApplication sharedApplication].statusBarFrame));
         CGFloat scrollDiff = scrollOffset - self.previousScrollViewYOffset;
         
-        // 滑動速度
-        CGFloat velocity = 40;
-        
-        if (scrollDiff > velocity) {
+        if (scrollOffset <= -scrollView.contentInset.top) {
+            [self showStatusBar:YES completion:nil];
+        }
+        else if (scrollOffset + scrollHeight >= scrollContentSizeHeight) {
             [self showStatusBar:NO completion:nil];
         }
-        else if (scrollDiff < -velocity) {
-            [self showStatusBar:YES completion:nil];
+        else {
+            // 滑動速度
+            CGFloat velocity = 40;
+            
+            if (scrollDiff > velocity) {
+                [self showStatusBar:NO completion:nil];
+            }
+            else if (scrollDiff < -velocity) {
+                [self showStatusBar:YES completion:nil];
+            }
         }
         
         if (!self.isScrollAnimating) {
