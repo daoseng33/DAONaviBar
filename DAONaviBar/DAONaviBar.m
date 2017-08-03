@@ -33,7 +33,6 @@ static CGFloat expandNaviHeight = 44.0;
     if (scrollView.isDragging) {
         CGFloat scrollHeight = scrollView.frame.size.height;
         CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
-//        CGFloat scrollOffset = MAX(-scrollView.contentInset.top, MIN(scrollContentSizeHeight - scrollHeight, scrollView.contentOffset.y));
         CGFloat scrollOffset = scrollView.contentOffset.y;
         
         CGRect statusFrame = self.statusBarWindow.frame;
