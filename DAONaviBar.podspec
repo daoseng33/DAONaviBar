@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.screenshots  = "https://media.giphy.com/media/aMkjGZk8fA8HC/giphy.gif"
   s.license      = "WTFPL"
   s.author             = { "daoseng33" => "lc.ray2011@gmail.com" }
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/daoseng33/DAONaviBar.git", :tag => "#{s.version}" }
   s.source_files = "DAONaviBar", "DAONaviBarDemo/DAONaviBar/**/*.{h,m}"
   s.framework    = "UIKit"
