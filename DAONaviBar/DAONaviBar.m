@@ -23,6 +23,7 @@ static CGFloat expandNaviHeight = 44.0;
 @property (nonatomic) CGRect originalBackButtonFrame;
 @property (nonatomic) CGRect originalTitleLabelframe;
 @property (assign, nonatomic) BOOL isScrollAnimating;
+@property (assign, nonatomic) BOOL hideTitle;
 @property (strong, nonatomic) HTDelegateProxy *delegateProxy;
 
 @end
@@ -134,15 +135,18 @@ static CGFloat expandNaviHeight = 44.0;
     self.cloneBackView.frame = frame;
     self.cloneBackView.transform = CGAffineTransformMakeScale(1.0 - 0.15 * percentage, 1.0 - 0.15 * percentage);
     
-    CGRect titleFrame = self.cloneTitleLabel.frame;
-    titleFrame.origin.y = CGRectGetMinY(self.originalTitleLabelframe) - (CGRectGetMinY(self.originalTitleLabelframe) * percentage);
-    self.cloneTitleLabel.frame = titleFrame;
-    self.cloneTitleLabel.transform = CGAffineTransformMakeScale(1.0 - 0.1 * percentage, 1.0 - 0.1 * percentage);
-    
-    for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
-        if (![NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackIndicatorView"] && ![NSStringFromClass([view class]) isEqualToString:@"_UIBarBackground"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackground"] && view != self.cloneBackView && view != self.cloneTitleLabel) {
-            view.alpha = alpha;
+    if (self.hideTitle) {
+        for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
+            if (![NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackIndicatorView"] && ![NSStringFromClass([view class]) isEqualToString:@"_UIBarBackground"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackground"] && view != self.cloneBackView) {
+                view.alpha = alpha;
+            }
         }
+    }
+    else {
+        CGRect titleFrame = self.cloneTitleLabel.frame;
+        titleFrame.origin.y = CGRectGetMinY(self.originalTitleLabelframe) - (CGRectGetMinY(self.originalTitleLabelframe) * percentage);
+        self.cloneTitleLabel.frame = titleFrame;
+        self.cloneTitleLabel.transform = CGAffineTransformMakeScale(1.0 - 0.1 * percentage, 1.0 - 0.1 * percentage);
     }
 }
 
@@ -170,7 +174,7 @@ static CGFloat expandNaviHeight = 44.0;
         if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"]) {
             view.alpha = 1.0;
             [self.cloneBackView removeFromSuperview];
-        } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"]) {
+        } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"] && !self.hideTitle) {
             for (UILabel *label in view.subviews) {
                 [self.cloneTitleLabel removeFromSuperview];
                 label.alpha = 1.0;
@@ -201,13 +205,14 @@ static CGFloat expandNaviHeight = 44.0;
     return instance;
 }
 
-- (void)setupWithController:(UIViewController *)vc scrollView:(UIScrollView *)scrollView {
+- (void)setupWithController:(UIViewController *)vc scrollView:(UIScrollView *)scrollView hideTitle:(BOOL)hideTitle {
     self.vc = vc;
+    self.hideTitle = hideTitle;
     self.delegateProxy = [[HTDelegateProxy alloc] initWithDelegates:@[self, vc]];
     scrollView.delegate = (id)self.delegateProxy;
     
     [self setupInitValues];
-    [self setupBackImageView];
+    [self setupCloneView];
 }
 
 - (void)setupInitValues {
@@ -216,7 +221,7 @@ static CGFloat expandNaviHeight = 44.0;
     [self.vc.navigationController.navigationBar addGestureRecognizer:tapGR];
 }
 
-- (void)setupBackImageView {
+- (void)setupCloneView {
     for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
         if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"]) {
             self.cloneBackView = [[UIView alloc] initWithFrame:view.frame];
@@ -236,7 +241,7 @@ static CGFloat expandNaviHeight = 44.0;
             [self.vc.navigationController.navigationBar addSubview:self.cloneBackView];
             view.alpha = 0;
             
-        } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"]) {
+        } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"] && !self.hideTitle) {
             for (UILabel *label in view.subviews) {
                 self.originalTitleLabelframe = view.frame;
                 self.cloneTitleLabel = [[UILabel alloc] initWithFrame:view.frame];

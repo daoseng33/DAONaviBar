@@ -42,7 +42,7 @@
 }
 
 - (void)setupDAONaviBar {
-    [[DAONaviBar sharedInstance] setupWithController:self scrollView:self.webView.scrollView];
+    [[DAONaviBar sharedInstance] setupWithController:self scrollView:self.webView.scrollView hideTitle:self.hideTitle];
 }
 
 #pragma mark - misc

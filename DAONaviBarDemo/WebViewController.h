@@ -11,6 +11,7 @@
 @interface WebViewController : UIViewController
 
 @property (nonatomic) BOOL isOriginal;
+@property (nonatomic) BOOL hideTitle;
 @property (strong, nonatomic) NSString *url;
 
 @end

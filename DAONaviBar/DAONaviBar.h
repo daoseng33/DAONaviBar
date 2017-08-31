@@ -12,6 +12,6 @@
 
 + (instancetype)sharedInstance;
 
-- (void)setupWithController:(UIViewController *)vc scrollView:(UIScrollView *)scrollView;
+- (void)setupWithController:(UIViewController *)vc scrollView:(UIScrollView *)scrollView hideTitle:(BOOL)hideTitle;
 
 @end
