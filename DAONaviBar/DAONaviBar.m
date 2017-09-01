@@ -144,9 +144,17 @@ static CGFloat expandNaviHeight = 44.0;
     
     if (self.hideTitle) {
         for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
-            if (![NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackIndicatorView"] && ![NSStringFromClass([view class]) isEqualToString:@"_UIBarBackground"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackground"] && view != self.cloneBackView) {
-                view.alpha = 1 - percentage;
+            UILabel *titleLabel;
+            
+            if ([NSStringFromClass([view class]) isEqualToString:@"UILabel"]) {
+                titleLabel = (UILabel *)view;
+            } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"]) {
+                for (UILabel *label in view.subviews) {
+                    titleLabel = label;
+                }
             }
+            
+            titleLabel.alpha = 1 - percentage;
         }
     }
     else {
