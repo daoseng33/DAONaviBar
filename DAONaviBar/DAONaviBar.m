@@ -256,18 +256,31 @@ static CGFloat expandNaviHeight = 44.0;
             [self.vc.navigationController.navigationBar addSubview:self.cloneBackView];
             view.alpha = 0;
             
-        } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"] && !self.hideTitle) {
-            for (UILabel *label in view.subviews) {
+        }
+        
+        if (!self.hideTitle) {
+            UILabel *titleLabel;
+            
+            if ([NSStringFromClass([view class]) isEqualToString:@"UILabel"]) {
+                titleLabel = (UILabel *)view;
+            } else if ([NSStringFromClass([view class]) isEqualToString:@"UINavigationItemView"]) {
+                for (UILabel *label in view.subviews) {
+                    titleLabel = label;
+                }
+            }
+            
+            if (titleLabel) {
                 self.originalTitleLabelframe = view.frame;
                 self.cloneTitleLabel = [[UILabel alloc] initWithFrame:view.frame];
-                self.cloneTitleLabel.text = label.text;
-                self.cloneTitleLabel.font = label.font;
-                self.cloneTitleLabel.textColor = label.textColor;
-                self.cloneTitleLabel.adjustsFontSizeToFitWidth = label.adjustsFontSizeToFitWidth;
+                self.cloneTitleLabel.text = titleLabel.text;
+                self.cloneTitleLabel.font = titleLabel.font;
+                self.cloneTitleLabel.textColor = titleLabel.textColor;
+                self.cloneTitleLabel.adjustsFontSizeToFitWidth = titleLabel.adjustsFontSizeToFitWidth;
                 [self.vc.navigationController.navigationBar addSubview:self.cloneTitleLabel];
-                label.alpha = 0.0;
+                titleLabel.alpha = 0.0;
             }
         }
+
     }
 }
 
