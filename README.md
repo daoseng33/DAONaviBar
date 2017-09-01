@@ -15,7 +15,7 @@ DAONaviBar is a Facebook like navigation bar with smooth auto-scrolling animatio
 ## Installation ##
 ### CocoaPods ###
 ```
-pod 'DAONaviBar', '~> 0.4.4'
+pod 'DAONaviBar', '~> 0.4.5'
 ```
 
 ## Usage ##
