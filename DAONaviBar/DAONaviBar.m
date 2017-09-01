@@ -122,36 +122,47 @@ static CGFloat expandNaviHeight = 44.0;
 }
 
 - (void)updateStatusBar:(CGFloat)percentage {
-    CGFloat alpha = 1 - percentage;
-    self.statusBarWindow.alpha = alpha;
+    self.statusBarWindow.alpha = 1 - percentage;
 }
 
 - (void)updateBarButtonItems:(CGFloat)percentage {
-    CGFloat alpha = 1 - percentage;
-    
-    CGRect frame = self.cloneBackView.frame;
-    frame.origin.y = CGRectGetMinY(self.originalBackButtonFrame) - (CGRectGetMinY(self.originalBackButtonFrame) * percentage);
-    frame.origin.x = CGRectGetMinX(self.originalBackButtonFrame) - (10 * percentage);
-    self.cloneBackView.frame = frame;
-    CGFloat diff = 1 - (foldNaviHeight / CGRectGetHeight(self.originalBackButtonFrame));
+    CGFloat diff = 1.0 - (foldNaviHeight / CGRectGetHeight(self.originalBackButtonFrame));
     CGFloat scale = 1.0 - (diff * percentage);
     self.cloneBackView.transform = CGAffineTransformMakeScale(scale, scale);
+    
+    CGRect frame = self.cloneBackView.frame;
+    
+    CGFloat originalBottomMargin = ((expandNaviHeight - CGRectGetHeight(self.cloneBackView.frame)) / 2);
+    CGFloat foldBottomMargin = 0.0;
+    frame.origin.y = expandNaviHeight - CGRectGetHeight(self.cloneBackView.frame) - originalBottomMargin - ((originalBottomMargin - foldBottomMargin) * percentage);
+    
+    CGFloat originalLeftMargin = CGRectGetMinX(self.originalBackButtonFrame);
+    CGFloat foldLeftMargin = 0.0;
+    frame.origin.x = originalLeftMargin + ((foldLeftMargin - originalLeftMargin) * percentage);
+    
+    self.cloneBackView.frame = frame;
     
     if (self.hideTitle) {
         for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
             if (![NSStringFromClass([view class]) isEqualToString:@"UINavigationButton"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackIndicatorView"] && ![NSStringFromClass([view class]) isEqualToString:@"_UIBarBackground"] && ![NSStringFromClass([view class]) isEqualToString:@"_UINavigationBarBackground"] && view != self.cloneBackView) {
-                view.alpha = alpha;
+                view.alpha = 1 - percentage;
             }
         }
     }
     else {
+        CGFloat tDiff = 1.0 - (foldNaviHeight / CGRectGetHeight(self.originalTitleLabelframe));
+        CGFloat tScale = 1.0 - (tDiff * percentage);
+        self.cloneTitleLabel.transform = CGAffineTransformMakeScale(tScale, tScale);
+        
         CGRect titleFrame = self.cloneTitleLabel.frame;
-        titleFrame.origin.y = CGRectGetMinY(self.originalTitleLabelframe) - (CGRectGetMinY(self.originalTitleLabelframe) * percentage);
+        
+        CGFloat originalTitleBottomMargin = ((expandNaviHeight - CGRectGetHeight(self.cloneTitleLabel.frame)) / 2);
+        CGFloat foldTitleBottomMargin = 0.0;
+        titleFrame.origin.y = expandNaviHeight - CGRectGetHeight(self.cloneTitleLabel.frame) - originalTitleBottomMargin - ((originalTitleBottomMargin - foldTitleBottomMargin) * percentage);
+    
         self.cloneTitleLabel.frame = titleFrame;
-        diff = 1 - (foldNaviHeight / CGRectGetHeight(self.originalTitleLabelframe));
-        scale = 1.0 - (diff * percentage);
-        self.cloneTitleLabel.transform = CGAffineTransformMakeScale(scale, scale);
     }
+    
 }
 
 #pragma mark - misc
