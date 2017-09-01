@@ -263,7 +263,7 @@ static CGFloat expandNaviHeight = 44.0;
                 self.cloneTitleLabel.text = label.text;
                 self.cloneTitleLabel.font = label.font;
                 self.cloneTitleLabel.textColor = label.textColor;
-                self.cloneTitleLabel.adjustsFontSizeToFitWidth = YES;
+                self.cloneTitleLabel.adjustsFontSizeToFitWidth = label.adjustsFontSizeToFitWidth;
                 [self.vc.navigationController.navigationBar addSubview:self.cloneTitleLabel];
                 label.alpha = 0.0;
             }
