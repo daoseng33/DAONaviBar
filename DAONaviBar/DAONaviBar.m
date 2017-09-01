@@ -133,7 +133,9 @@ static CGFloat expandNaviHeight = 44.0;
     frame.origin.y = CGRectGetMinY(self.originalBackButtonFrame) - (CGRectGetMinY(self.originalBackButtonFrame) * percentage);
     frame.origin.x = CGRectGetMinX(self.originalBackButtonFrame) - (10 * percentage);
     self.cloneBackView.frame = frame;
-    self.cloneBackView.transform = CGAffineTransformMakeScale(1.0 - 0.15 * percentage, 1.0 - 0.15 * percentage);
+    CGFloat diff = 1 - (foldNaviHeight / CGRectGetHeight(self.originalBackButtonFrame));
+    CGFloat scale = 1.0 - (diff * percentage);
+    self.cloneBackView.transform = CGAffineTransformMakeScale(scale, scale);
     
     if (self.hideTitle) {
         for (UIView *view in self.vc.navigationController.navigationBar.subviews) {
@@ -146,7 +148,9 @@ static CGFloat expandNaviHeight = 44.0;
         CGRect titleFrame = self.cloneTitleLabel.frame;
         titleFrame.origin.y = CGRectGetMinY(self.originalTitleLabelframe) - (CGRectGetMinY(self.originalTitleLabelframe) * percentage);
         self.cloneTitleLabel.frame = titleFrame;
-        self.cloneTitleLabel.transform = CGAffineTransformMakeScale(1.0 - 0.1 * percentage, 1.0 - 0.1 * percentage);
+        diff = 1 - (foldNaviHeight / CGRectGetHeight(self.originalTitleLabelframe));
+        scale = 1.0 - (diff * percentage);
+        self.cloneTitleLabel.transform = CGAffineTransformMakeScale(scale, scale);
     }
 }
 
